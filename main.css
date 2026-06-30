@@ -91,3 +91,177 @@ input {
     color: #D4AF37;
     text-shadow: 0 0 8px rgba(212,175,55,.8);
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg, #3B0A1E, #641B2E);
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* العنوان */
+h1{
+    text-align: center;
+    margin: 35px 0;
+    font-size: 42px;
+    letter-spacing: 2px;
+    text-shadow: 0 3px 8px rgba(0,0,0,.3);
+}
+
+/* الحاوية الرئيسية */
+.container{
+    width: 90%;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* حقل الإدخال */
+input{
+    width: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* الأزرار */
+button{
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* كارت المهمة */
+.task{
+    width: 100%;
+    max-width: 500px;
+    margin: 25px auto;
+    padding: 18px 22px;
+
+    background: rgba(255,255,255,.12);
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.3);
+
+    transition: .3s ease;
+}
+
+.task:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.4);
+}
+
+/* النص */
+.task p{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    flex: 1;
+    margin: 0 15px;
+    word-break: break-word;
+}
+
+/* الأيقونات */
+.icon{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 24px;
+}
+
+.icon span{
+    cursor: pointer;
+    transition: .3s;
+}
+
+.icon span:hover{
+    transform: scale(1.2);
+}
+
+/* النجمة عند التثبيت */
+.star-active{
+    color: #D4AF37;
+    text-shadow: 0 0 8px rgba(212,175,55,.7);
+}
+
+/* المهمة المنتهية */
+.finish{
+    text-decoration: line-through;
+    color: #d6d6d6;
+    opacity: .7;
+}
+
+/* ========================= */
+/* Responsive */
+/* ========================= */
+
+@media (max-width:768px){
+
+    h1{
+        font-size: 32px;
+    }
+
+    .task{
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .task p{
+        font-size: 17px;
+    }
+
+    .icon{
+        font-size: 20px;
+        gap: 10px;
+    }
+
+    input{
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width:480px){
+
+    body{
+        padding: 12px;
+    }
+
+    h1{
+        font-size: 26px;
+    }
+
+    .task{
+        padding: 12px;
+    }
+
+    .task p{
+        font-size: 15px;
+    }
+
+    .icon{
+        font-size: 18px;
+        gap: 8px;
+    }
+
+    button{
+        width: 100%;
+    }
+
+}
